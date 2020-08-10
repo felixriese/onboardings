@@ -12,6 +12,7 @@ repository to the best of our capacities.
 - Machine Learning with scikit-learn
 - [Python 3](onboardings/python3.md)
 - [Hyperspectral Remote Sensing](onboardings/remotesensing.md)
+- [Scientific Writing](onboardings/scientificwriting.md)
 - Tensorflow.Keras
 
 ## License
