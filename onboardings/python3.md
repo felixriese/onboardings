@@ -24,6 +24,13 @@ Use linter to ensure code quality and style. Recommendations:
   scientific computing
 * [Pandas](https://www.datacamp.com/community/tutorials/pandas-tutorial-dataframe-python)
   for Easy-to-Use Data Handling and Data Mining
+* Measure and visualize runtime of a python script: [install snakeviz via `pip3 install snakeviz`]
+
+```bash
+python3 -m cProfile -o NameOfProfileFile.prof script.py
+
+snakeviz cprofile_test
+```
 
 ## Python for Machine Learning
 
@@ -32,6 +39,8 @@ See [scikit-learn](scikitlearn.md) and [Tensorflow.Keras](keras.md).
 ## Jupyter Notebooks
 
 *Work in Progress*
+
+### Magic commands
 
 Magic command for inline plots:
 
@@ -51,3 +60,28 @@ Auto-load changed packages:
 %load_ext autoreload
 %autoreload 2
 ```
+
+### Print notebooks with RISE
+
+Use [Jupyter Notebooks](http://jupyter.org) with [RISE](https://github.com/damianavila/RISE) for presentations that include code.
+
+1. Enable RISE:
+
+  ```bash
+  jupyter-nbextension install rise --py --sys-prefix
+  jupyter-nbextension enable rise --py --sys-prefix
+  ```
+
+2. Print with RISE:
+
+  * To print the notebook, execute the following commands:
+
+    `jupyter nbconvert --to pdf "MyNotebook.ipynb" --post serve`
+
+  * To print the notebook as slides, the (currently…) best way to do this, is:
+
+    `jupyter nbconvert --to slides "MyNotebook.ipynb" --post serve`
+
+    and to then add *?print-pdf* to the opened html-file that the URL ends with *...MyNotebook.slides.html?print-pdf*.
+
+  * Print this webpage in Chrome with Cmd-P, change layout to landscape, margins = None
